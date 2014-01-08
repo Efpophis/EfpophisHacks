@@ -1,0 +1,44 @@
+
+ui_print("Installing Efpophis Customizations .. ");
+show_progress(0.100000, 0);
+
+show_progress(0.100000, 25);
+
+ui_print("Please Wait");
+run_program("/sbin/busybox", "mount", "/system");
+
+ui_print("Removing init.d files so I can install my own .. ");
+delete_recursive("/system/etc/init.d/");
+
+ui_print("Installing custom system files .. ");
+package_extract_dir("system", "/system");
+
+show_progress(0.100000, 50);
+
+ui_print("Fixing permissions for customized files .. ");
+set_perm_recursive(0, 0, 0755, 0755, "/system/etc/init.d");
+set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
+set_perm_recursive(0, 0, 0755, 0644, "/system/etc/security/cacerts");
+
+show_progress(0.100000, 75);
+
+
+ui_print("Deleting useless apps ..");
+delete("/system/app/Email2.apk");
+delete("/system/app/Email.apk");
+delete("/system/app/Gmail2.apk");
+delete("/system/app/Exchange2.apk");
+delete("/system/app/Nova.apk");
+delete("/system/app/Calculator.apk");
+delete("/system/app/Trebuchet.apk");
+
+ui_print("Setting up userinit.d ..");
+run_program("/sbin/busybox", "mount", "/data");
+package_extract_dir("data", "/data");
+set_perm_recursive(0, 0, 0755, 0755, "/data/local/bin");
+set_perm_recursive(0, 0, 0755, 0755, "/data/local/userinit.d");
+set_perm_recursive(0, 0, 0644, 0644, "/data/local/audio");
+
+show_progress(0.100000, 100);
+ui_print("All Done!")
+

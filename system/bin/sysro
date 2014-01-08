@@ -1,0 +1,5 @@
+#!/system/bin/sh
+
+/system/bin/mount -o ro,remount /system
+
+mount | grep system
