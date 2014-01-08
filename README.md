@@ -65,3 +65,10 @@ License / Copying / Kanging:
 Do whatever the f*ck you want. I kanged most of this stuff and modified it to suit my needs, anyway, so why should I say someone else can't do the same?  I don't care if you give me credit, but it would be good if you gave the devs who I've kanged from some credit.
 
 Above all, I hope this proves useful to you.
+
+To install:
+
+1. git clone (this repository's url)
+2. git archive -o efpophis_hacks.zip
+3. Flash in TWRP (other recoveries are probably ok, too, but I haven't used them in a long time).
+4. Enjoy!
