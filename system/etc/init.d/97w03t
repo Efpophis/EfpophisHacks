@@ -1,42 +1,42 @@
-#!/system/bin/sh
+#!/system/xbin/sh
 # W03Tweaks
 
-#Disable fair sleepers
-echo "NO_GENTLE_FAIR_SLEEPERS" > /sys/kernel/debug/sched_features
+. /system/etc/init.d.config
 
-#Enable multi-core load balance
-echo "0" > /sys/devices/system/cpu/sched_mc_power_saving
+if $w03tweaks
+then
+	#Disable fair sleepers
+	echo "NO_GENTLE_FAIR_SLEEPERS" > /sys/kernel/debug/sched_features
 
-#Enable AFTR+LPA sleep
-echo "3" > /sys/module/cpuidle_exynos4/parameters/enable_mask
+	#Enable multi-core load balance
+	echo "0" > /sys/devices/system/cpu/sched_mc_power_saving
 
-#PegasusQ Tweaks
-echo "500000" > /sys/devices/system/cpu/cpufreq/pegasusq/freq_for_responsiveness
+	#Enable AFTR+LPA sleep
+	echo "3" > /sys/module/cpuidle_exynos4/parameters/enable_mask
 
-echo "40000" > /sys/devices/system/cpu/cpufreq/pegasusq/sampling_rate
+	#PegasusQ Tweaks
+	echo "500000" > /sys/devices/system/cpu/cpufreq/pegasusq/freq_for_responsiveness
 
-echo "80" > /sys/devices/system/cpu/cpufreq/pegasusq/up_threshold
+	echo "40000" > /sys/devices/system/cpu/cpufreq/pegasusq/sampling_rate
 
-echo "50" > /sys/devices/system/cpu/cpufreq/pegasusq/up_threshold_at_min_freq
+	echo "80" > /sys/devices/system/cpu/cpufreq/pegasusq/up_threshold
 
-echo "500000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_1_1
-echo "300000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_2_0
-echo "600000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_2_1
-echo "400000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_3_0
-echo "700000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_3_1
-echo "500000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_4_0
+	echo "50" > /sys/devices/system/cpu/cpufreq/pegasusq/up_threshold_at_min_freq
 
-#Read Ahead KB
-echo "2048" > /sys/devices/virtual/bdi/179:0/read_ahead_kb
-echo "2048" > /sys/devices/virtual/bdi/179:16/read_ahead_kb
-echo "2048" > /sys/devices/virtual/bdi/179:32/read_ahead_kb
-echo "2048" > /sys/devices/virtual/bdi/179:48/read_ahead_kb
+	echo "500000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_1_1
+	echo "300000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_2_0
+	echo "600000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_2_1
+	echo "400000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_3_0
+	echo "700000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_3_1
+	echo "500000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_4_0
+fi
 
-#ROW default scheduler
-echo "row" > /sys/block/mmcblk0/queue/scheduler
-sleep 60s
-echo "row" > /sys/block/mmcblk0/queue/scheduler
-sleep 60s
-echo "row" > /sys/block/mmcblk0/queue/scheduler
-sleep 180s
-echo "row" > /sys/block/mmcblk0/queue/scheduler
+if $sd_readahead
+then
+	#Read Ahead KB
+	echo "$readahead_value" > /sys/devices/virtual/bdi/179:0/read_ahead_kb
+	echo "$readahead_value" > /sys/devices/virtual/bdi/179:16/read_ahead_kb
+	echo "$readahead_value" > /sys/devices/virtual/bdi/179:32/read_ahead_kb
+	echo "$readahead_value" > /sys/devices/virtual/bdi/179:48/read_ahead_kb
+fi
+
