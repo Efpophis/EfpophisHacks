@@ -20,6 +20,20 @@ set_perm_recursive(0, 0, 0755, 0755, "/system/etc/init.d");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
 set_perm_recursive(0, 0, 0755, 0644, "/system/etc/security/cacerts");
 
+ui_print("Checking for framework-pac.jar .. ");
+
+ifelse(run_program("/system/bin/sh", "-c", "test -f /system/framework/framework-pac.jar") == 0,
+   (
+		ui_print("Creating symlinks to framework-pac.jar .. ");
+		symlink("/system/framework/framework-pac.jar", 
+			"/system/framework/framework2.jar", 
+			"/system/framework/framework-2.jar");
+	),
+#else
+	    (ui_print("No framework-pac.jar found, not fixing");)
+);
+
+
 show_progress(0.100000, 75);
 
 
