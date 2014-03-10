@@ -36,6 +36,13 @@ ifelse(run_program("/system/bin/sh", "-c", "test -f /system/framework/framework-
 
 show_progress(0.100000, 75);
 
+ui_print("Cleaning up telephony mess .. ");
+delete("/data/data/com.android.providers.telephony/databases/mmssms.db");
+delete("/data/data/com.android.providers.telephony/databases/mmssms.db-journal");
+delete("/data/data/com.android.providers.telephony/databases/telephony.db");
+delete("/data/data/com.android.providers.telephony/databases/telephony.db-journal");
+delete("/data/data/com.android.providers.contacts/databases/contacts2.db");
+delete("/data/data/com.android.providers.contacts/databases/contacts2.db-journal");
 
 ui_print("Deleting useless apps ..");
 delete("/system/app/Email2.apk");
