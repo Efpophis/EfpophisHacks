@@ -9,5 +9,17 @@ if [ -r /data/local/audio/bootup.wav ]; then
 fi
 
 if [ -r $BSND ]; then
+  echo "BOOTSND: playing $BSND during boot animation .. "
   /data/local/bin/tinyplay $BSND &
+  tinyplayPID=$!
 fi
+
+# wait for boot ani to stop
+while [ "`getprop init.svc.bootanim`" != "stopped" ]
+do
+	echo "BOOTSND: playing during boot animation .. "
+	sleep 1
+done
+
+echo "BOOTSND: bootanimation finished, stopping PID $tinyplayPID .. "
+kill $tinyplayPID
