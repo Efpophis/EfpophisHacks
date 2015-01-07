@@ -48,6 +48,7 @@ ui_print("Deleting useless apps ..");
 delete("/system/app/Email2.apk");
 delete("/system/app/Email.apk");
 delete("/system/app/Gmail2.apk");
+delete("/system/app/Gmail.apk");
 delete("/system/app/Exchange2.apk");
 delete("/system/app/Nova.apk");
 delete("/system/app/Calculator.apk");
