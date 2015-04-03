@@ -26,7 +26,8 @@ ui_print("Deleting useless apps ..");
 #delete("/system/app/Exchange2.apk");
 #delete("/system/app/Nova.apk");
 #delete("/system/app/Calculator.apk");
-#delete("/system/app/Trebuchet.apk");
+delete_recursive("/system/app/Calculator");
+
 
 show_progress(0.100000, 100);
 ui_print("All Done!")
