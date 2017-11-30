@@ -28,6 +28,9 @@ ui_print("Deleting useless apps ..");
 #delete("/system/app/Calculator.apk");
 delete_recursive("/system/app/Calculator");
 
+ui_print("Setting LCD density .. ");
+run_program("/sbin/sh", "-c", "sed -i 's:ro.sf.lcd_density=.*:ro.sf.lcd_density=340:' /system/build.prop");
+
 
 show_progress(0.100000, 100);
 ui_print("All Done!")
