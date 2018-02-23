@@ -41,8 +41,7 @@ gZrJ6KoPLE0zxe0=
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            cd:45:01:81:4d:76:f9:c1
+        Serial Number: 14791230206030313921 (0xcd4501814d76f9c1)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=US, ST=Michigan, L=Rochester Hills, O=Efpophis Networking, OU=Skunkworks, CN=Efpophis.net CA/emailAddress=efpophis@efpophis.net
         Validity
@@ -129,3 +128,4 @@ Certificate:
          0d:07:d6:f0:9e:cd:5f:03:2c:00:25:a9:22:73:0e:52:4e:ff:
          0b:3b:26:59:6e:be:05:c6:7e:47:f5:20:75:53:e9:81:9a:c9:
          e8:aa:0f:2c:4d:33:c5:ed
+SHA1 Fingerprint=C2:F9:B3:24:84:5A:76:65:A2:5D:D0:83:55:41:E9:8D:90:84:60:64
