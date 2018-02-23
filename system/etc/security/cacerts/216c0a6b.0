@@ -43,7 +43,7 @@ Certificate:
         Version: 3 (0x2)
         Serial Number:
             cd:45:01:81:4d:76:f9:c1
-        Signature Algorithm: sha1WithRSAEncryption
+    Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=US, ST=Michigan, L=Rochester Hills, O=Efpophis Networking, OU=Skunkworks, CN=Efpophis.net CA/emailAddress=efpophis@efpophis.net
         Validity
             Not Before: Jul 12 16:48:40 2012 GMT
@@ -51,8 +51,8 @@ Certificate:
         Subject: C=US, ST=Michigan, L=Rochester Hills, O=Efpophis Networking, OU=Skunkworks, CN=Efpophis.net CA/emailAddress=efpophis@efpophis.net
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
-            RSA Public Key: (4096 bit)
-                Modulus (4096 bit):
+                Public-Key: (4096 bit)
+                Modulus:
                     00:c0:70:e3:93:08:64:09:d3:8a:4e:6c:93:58:5e:
                     7f:7a:7a:59:d3:50:65:72:c0:80:ec:e4:13:07:57:
                     6e:a6:23:c0:33:c4:79:c2:7e:da:c4:ca:d1:14:37:
@@ -100,33 +100,32 @@ Certificate:
             X509v3 Basic Constraints: 
                 CA:TRUE
     Signature Algorithm: sha1WithRSAEncryption
-        52:5a:ee:22:8f:7f:2e:d1:f3:1f:90:ab:99:75:87:28:44:de:
-        e3:13:40:ba:5b:33:9b:86:5b:46:d0:30:ac:cd:f0:cd:ce:75:
-        56:37:dc:68:2e:76:68:31:1c:81:c5:4f:c7:87:22:99:75:7f:
-        bb:c2:57:ef:97:fc:cf:b8:96:d8:b2:bc:a8:0f:08:a8:2d:c6:
-        f3:86:11:6f:88:44:00:e7:7c:70:0e:29:a7:e0:0b:ee:55:ef:
-        56:54:d2:61:2a:bf:3f:74:e6:b5:58:d9:a5:10:c4:ab:0b:4e:
-        b0:b4:ef:7f:a1:54:f9:ec:f6:a4:0a:0c:b7:4c:be:fd:42:f7:
-        33:73:8c:00:0a:a1:91:dc:c8:1f:b7:b4:e5:18:bb:a3:17:46:
-        25:eb:b3:15:4d:75:98:4e:af:79:7c:3e:ed:5d:f5:5e:39:1a:
-        45:6a:cc:ed:f2:2e:a8:66:4d:34:3f:33:33:60:74:a9:91:1c:
-        ae:e2:09:92:e7:d5:79:65:c7:53:ff:ce:dd:67:d2:21:46:2b:
-        51:a7:d3:63:bd:de:1b:2c:36:34:3f:de:42:49:ce:04:ea:8c:
-        e3:92:cc:54:a2:8d:d8:08:c8:03:d5:31:ea:e7:7a:fe:ba:18:
-        66:6a:58:54:72:45:e2:d1:8b:aa:9b:4b:e6:b8:55:c4:46:39:
-        3b:c8:9f:d5:1b:c5:69:4f:71:70:0b:e4:5d:90:bf:cb:e6:ac:
-        93:a4:72:ea:eb:71:d4:ab:12:1a:7b:b8:9b:45:a3:a4:6a:15:
-        b4:1b:62:cb:3c:3a:e8:fb:87:d7:31:e6:02:e9:e3:f3:7d:30:
-        b2:fa:30:51:85:ce:77:88:07:b9:74:4c:d8:4d:00:e2:94:e3:
-        28:a1:75:98:85:13:fc:76:da:28:d3:9d:a9:cb:ec:89:aa:f6:
-        73:6e:20:fa:22:f0:92:22:35:33:09:96:7a:97:af:cc:6d:28:
-        b5:8c:71:1f:55:c0:55:30:a4:c9:1f:3f:7f:36:01:f9:13:3e:
-        ac:50:b9:cb:44:e7:23:c8:6b:15:28:77:3b:34:2d:3a:ac:ee:
-        cf:9c:d0:cf:83:f0:c5:2d:0f:82:e4:89:1d:72:de:14:e9:6f:
-        c2:f4:97:be:b6:80:77:f1:ff:b1:53:5a:b3:45:f8:9c:f1:17:
-        5b:c5:c6:96:99:ad:5b:d0:83:64:39:ab:3e:17:a2:66:68:b4:
-        f1:01:dd:d6:4c:48:6c:c5:7c:b5:a8:2b:ac:30:2f:d5:64:ee:
-        0d:07:d6:f0:9e:cd:5f:03:2c:00:25:a9:22:73:0e:52:4e:ff:
-        0b:3b:26:59:6e:be:05:c6:7e:47:f5:20:75:53:e9:81:9a:c9:
-        e8:aa:0f:2c:4d:33:c5:ed
-SHA1 Fingerprint=c2:f9:b3:24:84:5a:76:65:a2:5d:d0:83:55:41:e9:8d:90:84:60:64
+         52:5a:ee:22:8f:7f:2e:d1:f3:1f:90:ab:99:75:87:28:44:de:
+         e3:13:40:ba:5b:33:9b:86:5b:46:d0:30:ac:cd:f0:cd:ce:75:
+         56:37:dc:68:2e:76:68:31:1c:81:c5:4f:c7:87:22:99:75:7f:
+         bb:c2:57:ef:97:fc:cf:b8:96:d8:b2:bc:a8:0f:08:a8:2d:c6:
+         f3:86:11:6f:88:44:00:e7:7c:70:0e:29:a7:e0:0b:ee:55:ef:
+         56:54:d2:61:2a:bf:3f:74:e6:b5:58:d9:a5:10:c4:ab:0b:4e:
+         b0:b4:ef:7f:a1:54:f9:ec:f6:a4:0a:0c:b7:4c:be:fd:42:f7:
+         33:73:8c:00:0a:a1:91:dc:c8:1f:b7:b4:e5:18:bb:a3:17:46:
+         25:eb:b3:15:4d:75:98:4e:af:79:7c:3e:ed:5d:f5:5e:39:1a:
+         45:6a:cc:ed:f2:2e:a8:66:4d:34:3f:33:33:60:74:a9:91:1c:
+         ae:e2:09:92:e7:d5:79:65:c7:53:ff:ce:dd:67:d2:21:46:2b:
+         51:a7:d3:63:bd:de:1b:2c:36:34:3f:de:42:49:ce:04:ea:8c:
+         e3:92:cc:54:a2:8d:d8:08:c8:03:d5:31:ea:e7:7a:fe:ba:18:
+         66:6a:58:54:72:45:e2:d1:8b:aa:9b:4b:e6:b8:55:c4:46:39:
+         3b:c8:9f:d5:1b:c5:69:4f:71:70:0b:e4:5d:90:bf:cb:e6:ac:
+         93:a4:72:ea:eb:71:d4:ab:12:1a:7b:b8:9b:45:a3:a4:6a:15:
+         b4:1b:62:cb:3c:3a:e8:fb:87:d7:31:e6:02:e9:e3:f3:7d:30:
+         b2:fa:30:51:85:ce:77:88:07:b9:74:4c:d8:4d:00:e2:94:e3:
+         28:a1:75:98:85:13:fc:76:da:28:d3:9d:a9:cb:ec:89:aa:f6:
+         73:6e:20:fa:22:f0:92:22:35:33:09:96:7a:97:af:cc:6d:28:
+         b5:8c:71:1f:55:c0:55:30:a4:c9:1f:3f:7f:36:01:f9:13:3e:
+         ac:50:b9:cb:44:e7:23:c8:6b:15:28:77:3b:34:2d:3a:ac:ee:
+         cf:9c:d0:cf:83:f0:c5:2d:0f:82:e4:89:1d:72:de:14:e9:6f:
+         c2:f4:97:be:b6:80:77:f1:ff:b1:53:5a:b3:45:f8:9c:f1:17:
+         5b:c5:c6:96:99:ad:5b:d0:83:64:39:ab:3e:17:a2:66:68:b4:
+         f1:01:dd:d6:4c:48:6c:c5:7c:b5:a8:2b:ac:30:2f:d5:64:ee:
+         0d:07:d6:f0:9e:cd:5f:03:2c:00:25:a9:22:73:0e:52:4e:ff:
+         0b:3b:26:59:6e:be:05:c6:7e:47:f5:20:75:53:e9:81:9a:c9:
+         e8:aa:0f:2c:4d:33:c5:ed

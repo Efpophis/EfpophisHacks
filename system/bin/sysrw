@@ -2,4 +2,4 @@
 
 /system/bin/mount -o rw,remount /system
 
-mount | grep system
+/system/bin/mount | grep system

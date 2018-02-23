@@ -16,22 +16,6 @@ ui_print("Fixing permissions for customized files .. ");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
 set_perm_recursive(0, 0, 0755, 0644, "/system/etc/security/cacerts");
 
-show_progress(0.100000, 75);
-
-ui_print("Deleting useless apps ..");
-#delete("/system/app/Email2.apk");
-#delete("/system/app/Email.apk");
-#delete("/system/app/Gmail2.apk");
-#delete("/system/app/Gmail.apk");
-#delete("/system/app/Exchange2.apk");
-#delete("/system/app/Nova.apk");
-#delete("/system/app/Calculator.apk");
-delete_recursive("/system/app/Calculator");
-
-#ui_print("Setting LCD density .. ");
-#run_program("/sbin/sh", "-c", "sed -i 's:ro.sf.lcd_density=.*:ro.sf.lcd_density=340:' /system/build.prop");
-
-
 show_progress(0.100000, 100);
 ui_print("All Done!")
 
