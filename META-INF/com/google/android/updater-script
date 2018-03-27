@@ -12,9 +12,9 @@ package_extract_dir("system", "/system");
 
 show_progress(0.100000, 50);
 
-ui_print("Fixing permissions for customized files .. ");
-set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
-set_perm_recursive(0, 0, 0755, 0644, "/system/etc/security/cacerts");
+#ui_print("Fixing permissions for customized files .. ");
+#set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
+#set_perm_recursive(0, 0, 0755, 0644, "/system/etc/security/cacerts");
 
 show_progress(0.100000, 100);
 ui_print("All Done!")
